@@ -1,16 +1,32 @@
-.App-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border:1px solid red;
-    padding: 1rem 2.5rem;
-
-    div{
+.App{
+    &-header{
         display: flex;
         align-items: center;
-        img{
-            width:2rem;
-            height:2rem;
+        justify-content: space-between;
+        border:1px solid red;
+        padding: 1rem 4.5rem;
+            h1{
+                font-size: 2rem;
+                font-weight: 600;
+            }
+        div{
+            display: flex;
+            align-items: center;
+            img{
+                width:1.3rem;
+                height:1.3rem;
+            }
+            span{
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
         }
+    }
+    &-body{
+        border: 1px solid orange;
+        width: 90%;
+        margin: 0 auto;
+        height: 100vh;
+        margin-top: 3rem;
     }
 }
