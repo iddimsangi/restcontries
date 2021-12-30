@@ -1,4 +1,5 @@
 import "./App.scss";
+import CountriesList from "./CountriesList/CountriesList"
 import moon from "./img/half-moon-svgrepo-com.svg";
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
           <span> Dark Mode</span>
         </div>
       </nav>
-      <main className="App-body"></main>
+      <main className="App-body">
+        <CountriesList/>
+      </main>
     </div>
   );
 }
