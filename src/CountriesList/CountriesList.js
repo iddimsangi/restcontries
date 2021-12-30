@@ -26,7 +26,19 @@ function CountriesList() {
           </select>
         </form>
       </div>
+      <div className="countryList">
       <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      <Country />
+      </div>
+   
+    
     </div>
   );
 }
