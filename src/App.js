@@ -1,12 +1,15 @@
-
-import './App.scss';
-
+import "./App.scss";
+import moon from "./img/half-moon-svgrepo-com.svg"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-    <h1>hello</h1>
-      </header>
+      <nav className="App-header">
+        <h1>where in the world?</h1>
+        <div>
+        <img src={moon} alt="moon" />
+        Dark Mode
+        </div>
+      </nav>
     </div>
   );
 }
