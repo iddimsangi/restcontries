@@ -1,6 +1,6 @@
 import "./App.scss";
 import CountriesList from "./CountriesList/CountriesList"
-import moon from "./img/half-moon-svgrepo-com.svg";
+import moon from "./img/icon-moon.svg";
 function App() {
   return (
     <div className="App">

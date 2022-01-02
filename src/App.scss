@@ -1,13 +1,17 @@
 .App{
+    background-color: hsl(207, 26%, 17%);
     &-header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border:1px solid red;
-        padding: 1rem 4.5rem;
+        background-color: hsl(209, 23%, 22%);
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        padding: 1.5rem 4.5rem;
+       
             h1{
                 font-size: 2rem;
                 font-weight: 600;
+                color: hsl(0, 0%, 100%);
             }
         div{
             display: flex;
@@ -20,6 +24,7 @@
                 font-size: 1.2rem;
                 font-weight: 600;
                 margin-left: .5rem;
+                color: hsl(0, 0%, 100%);
             }
         }
     }
