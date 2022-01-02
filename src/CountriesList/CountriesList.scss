@@ -6,11 +6,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid red;
+            // border: 1px solid red;
             div{
                 width: 40%;
-                border: 1px solid orange;
-                background-color: blueviolet;
+                background-color: hsl(209, 23%, 22%);
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
               display: flex;
               align-items: center;
                 margin-left: 1rem;
@@ -32,6 +32,9 @@
                         outline: none;
                         border: none;
                     }
+                    &::placeholder{
+                        color: hsl(0, 0%, 100%);
+                    }
                  
                 }
             }
@@ -40,20 +43,22 @@
         select{
             padding: 1rem;
             width:15rem;
-            background-color: red;
+            background-color: hsl(209, 23%, 22%);
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
             color: #fff;
             border: none;
             &:focus{
                 outline: none;
                 border: none;
             }
+      
             // margin-right: 1.5rem;
         }
     }
  .countryList{
      display: grid;
-    border: 2px solid yellow;
-     grid-template-columns: 1fr 1fr 1fr 1fr;
+    //  border: 2px solid yellow;
+     grid-template-columns:repeat(4, 1fr);
      width: 100%;
     //  border: 1px solid red;
     //  justify-content: space-between;
