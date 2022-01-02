@@ -31,11 +31,7 @@ function CountriesList() {
       <Country />
       <Country />
       <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
-      <Country />
+     
       </div>
    
     

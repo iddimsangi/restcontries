@@ -8,9 +8,14 @@
             justify-content: space-between;
             border: 1px solid red;
             div{
-                width: 60%;
+                width: 40%;
                 border: 1px solid orange;
+                background-color: blueviolet;
+              display: flex;
+              align-items: center;
+                margin-left: 1rem;
                 label{
+                    margin-left: 2rem;
                     img{
                         width: 2rem;
                         height: 2rem;
@@ -18,8 +23,16 @@
                 }
                 // font-size: 1.4rem;
                 input{
-                    width: 80%;
+                    width: 90%;
                     padding: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    color: hsl(0, 0%, 100%);
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+                 
                 }
             }
           
@@ -27,6 +40,13 @@
         select{
             padding: 1rem;
             width:15rem;
+            background-color: red;
+            color: #fff;
+            border: none;
+            &:focus{
+                outline: none;
+                border: none;
+            }
             // margin-right: 1.5rem;
         }
     }
