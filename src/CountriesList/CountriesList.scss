@@ -44,7 +44,7 @@
         }
         select{
             padding: 1rem;
-            margin-right: 2rem;
+            // margin-right: 2rem;
             width:15rem;
             background-color: hsl(209, 23%, 22%);
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -54,8 +54,6 @@
                 outline: none;
                 border: none;
             }
-      
-            // margin-right: 1.5rem;
         }
         .countryList{
             margin-top: 2rem;
@@ -64,9 +62,52 @@
             justify-content: center;
             grid-template-columns:repeat(4, 1fr);
             width: 100%;
-           //  border: 1px solid red;
-           //  justify-content: space-between;
         }
     }
-   
+   @media only screen and (max-width:875px){
+    &--container{
+ 
+        form{
+        background-color: #fff;
+            div{
+                width: 40%;
+                margin-left: 0em;
+                input{
+                    width: 100%;    
+                }
+            }
+          
+        }
+        select{
+            margin-right: 0rem;
+        }
+        .countryList{
+            margin-top: 2rem;
+            grid-template-columns:repeat(3, 1fr);
+        }
+    }
+   }
+   @media only screen and (max-width:687px){
+    &--container{
+ 
+        form{
+        background-color: #fff;
+            div{
+                width: 40%;
+                margin-left: 0em;
+                input{
+                    width: 100%;    
+                }
+            }
+          
+        }
+        select{
+            margin-right: 0rem;
+        }
+        .countryList{
+            margin-top: 2rem;
+            grid-template-columns:repeat(3, 1fr);
+        }
+    }
+   }
 }
