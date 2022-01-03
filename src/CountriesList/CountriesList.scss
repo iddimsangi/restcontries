@@ -87,7 +87,7 @@
         }
     }
    }
-   @media only screen and (max-width:687px){
+   @media only screen and (max-width:645px){
     &--container{
  
         form{
@@ -106,7 +106,30 @@
         }
         .countryList{
             margin-top: 2rem;
-            grid-template-columns:repeat(3, 1fr);
+            grid-template-columns:repeat(2, 1fr);
+        }
+    }
+   }
+   @media only screen and (max-width:440px){
+    &--container{
+ 
+        form{
+        background-color: #fff;
+            div{
+                width: 40%;
+                margin-left: 0em;
+                input{
+                    width: 100%;    
+                }
+            }
+          
+        }
+        select{
+            margin-right: 0rem;
+        }
+        .countryList{
+            margin-top: 2rem;
+            grid-template-columns:1.2fr;
         }
     }
    }
