@@ -28,14 +28,15 @@ function CountriesList(props) {
         </form>
 
         <div className="countryList">
-          <Country />
-          <Country />
-          <Country />
-          <Country />
-          <Country />
-          <Country />
-          <Country />
-          <Country />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+          <Country themeHandler={props.theme} />
+
         </div>
       </div>
     </div>

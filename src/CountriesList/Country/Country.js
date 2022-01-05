@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Country.scss"
 import flag from "../../img/1200px-Flag_of_Germany.svg.png"
-function Country() {
+function Country(props) {
     return (
         <div className="country-App">
-            <div className="countryBox">
+            <div className={props.themeHandler ? "countryBox" : "countryBoxV2"}>
                 <img src={flag} alt="flag"/>
                 <div className="content">
                     <h3>Germany</h3>
