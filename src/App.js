@@ -3,6 +3,7 @@ import "./App.scss";
 import CountriesList from "./CountriesList/CountriesList";
 import { ReactComponent as Moon } from "./img/half-moon-shape-svgrepo-com.svg";
 import { ReactComponent as MoonIcon } from "./img/icon-moon.svg";
+import Countryprofile from "./Countryprofile/Countryprofile"
 // import moonIcon from "./img/icon-moon.svg";
 function App(props) {
   const [theme, settheme] = useState(true);
@@ -27,7 +28,8 @@ function App(props) {
           </div>
         </nav>
         <main className="App-body">
-          <CountriesList theme={theme} />
+          <Countryprofile/>
+          {/* <CountriesList theme={theme} /> */}
         </main>
       </div>
     </div>

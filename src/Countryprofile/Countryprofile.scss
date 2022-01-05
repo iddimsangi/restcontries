@@ -1,0 +1,29 @@
+.container {
+  ul{
+    list-style: none;
+  }
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    &-img {
+      width: 40%;
+    }
+    &-contents {
+      h2 {
+      }
+      .inner-box {
+        display: flex;
+     
+        &:first-child {
+          border: 1px solid red;
+        }
+        &:last-child {
+          border: 1px solid orange;
+        }
+      }
+      .content--footer {
+        border: 1px solid yellow;
+      }
+    }
+  }
+}
