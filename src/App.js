@@ -27,7 +27,7 @@ function App(props) {
           </div>
         </nav>
         <main className="App-body">
-          <CountriesList />
+          <CountriesList theme={theme} />
         </main>
       </div>
     </div>

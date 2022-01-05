@@ -13,7 +13,7 @@
             // margin-right: 10rem;
             // border: 1px solid red;
           
-            div{
+            .input-container{
                 width: 40%;
                 background-color: hsl(209, 23%, 22%);
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -45,13 +45,64 @@
                 }
             }
 
-            select{
+            .input-container2{
+                width: 40%;
+                background-color:#fff;
+                color: #222;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+                // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+              display: flex;
+              align-items: center;
+                // margin-left: 3rem;
+                label{
+                    margin-left: 2rem;
+                    img{
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                }
+                // font-size: 1.4rem;
+                input{
+                    width: 90%;
+                    padding: 1rem;
+                    background-color: transparent;
+                    border: none;
+                    color: #222;
+                    &:focus{
+                        outline: none;
+                        border: none;
+                    }
+                    &::placeholder{
+                        color: #222;
+                    }
+                 
+                }
+            }
+
+            .select-container{
                 padding: 1rem;
                 // margin-right: 7.5rem;
                 width:15rem;
                 background-color: hsl(209, 23%, 22%);
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
                 color: #fff;
+                border: none;
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+            }
+
+
+            .select-container2{
+                padding: 1rem;
+                // margin-right: 7.5rem;
+                width:15rem;
+                background-color: #fff;
+                box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+                // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                color: #222;
                 border: none;
                 &:focus{
                     outline: none;
