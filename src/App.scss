@@ -1,3 +1,10 @@
+.inputChek{display: none;}
+.inputChek:checked ~ .App,
+.inputChek:checked ~ .App .App-header,
+.inputChek:checked ~ .App .App-header h1{
+    background-color: #fff;
+    color: #222;
+}
 .App{
     background-color: hsl(207, 26%, 17%);
     &-header{
@@ -10,21 +17,41 @@
        
             h1{
                 font-size: 2rem;
-                font-weight: 600;
+                font-weight: 800;
                 color: hsl(0, 0%, 100%);
             }
         div{
+            .logoSvg{
+                height: 1.5rem;
+                width: 1.6rem;
+                cursor: pointer;
+            }
+            .logoSvg2{
+                // display: none;
+                fill: #fff;
+                height: 1.5rem;
+                width: 1.6rem;
+                cursor: pointer;
+            }
             display: flex;
             align-items: center;
             img{
                 width:1.3rem;
                 height:1.3rem;
+                cursor: pointer;
+                // display: none;
             }
-            span{
+            .navText{
                 font-size: 1.2rem;
                 font-weight: 600;
                 margin-left: .5rem;
                 color: hsl(0, 0%, 100%);
+            }
+            .navText2{
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-left: .5rem;
+                color: #222;
             }
         }
     }
@@ -32,7 +59,7 @@
         // border: 1px solid orange;
         width: 90%;
         margin: 0 auto;
-        height: 100vh;
+       min-height: 100vh;
         margin-top: 3rem;
     }
     @media only screen and (max-width:375){
