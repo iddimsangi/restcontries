@@ -10,7 +10,7 @@ function Countryprofile() {
                 <div className="container--box-contents">
                     <h2>Belgium</h2>
                     <div className="inner-box">
-                        <ul>
+                        <ul className="inner-box--l1">
                             <li>
                                 Native Name:<span>Belgium</span>
                             </li>
@@ -27,7 +27,7 @@ function Countryprofile() {
                                 Capital:<span>Brussels</span>
                             </li>
                         </ul>
-                        <ul>
+                        <ul className="inner-box--l2">
                             <li>
                                 Top Level Domain:<span>.be</span>
                             </li>

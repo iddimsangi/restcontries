@@ -15,7 +15,7 @@ useEffect(() =>{
     .then(response => {
       // console.log(response.data)
       setcountries(response.data);
-      console.log(countries)
+      console.log(countries[0])
       return response.data;
     })
    
@@ -48,8 +48,8 @@ useEffect(() =>{
           </div>
         </nav>
         <main className="App-body">
-          {/* <Countryprofile/> */}
-          <CountriesList countriesListArray={countries} theme={theme} />
+          <Countryprofile/>
+          {/* <CountriesList countriesListArray={countries} theme={theme} /> */}
         </main>
       </div>
     </div>
