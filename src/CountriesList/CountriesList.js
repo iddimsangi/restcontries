@@ -28,14 +28,9 @@ function CountriesList(props) {
         </form>
 
         <div className="countryList">
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
-          <Country themeHandler={props.theme} />
+          {props.countriesListArray.map(
+            countriesListArrayObj => <Country countryData = {countriesListArrayObj} themeHandler={props.theme} />
+          )}
 
         </div>
       </div>

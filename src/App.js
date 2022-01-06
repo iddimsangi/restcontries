@@ -1,12 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import "./App.scss";
 import CountriesList from "./CountriesList/CountriesList";
 import { ReactComponent as Moon } from "./img/half-moon-shape-svgrepo-com.svg";
 import { ReactComponent as MoonIcon } from "./img/icon-moon.svg";
 import Countryprofile from "./Countryprofile/Countryprofile"
+import axios from "axios";
 // import moonIcon from "./img/icon-moon.svg";
 function App(props) {
+  const[countries, setcountries] = useState([]);
   const [theme, settheme] = useState(true);
+useEffect(() =>{
+  const countriesData = () =>{
+    axios.get("https://restcountries.com/v3.1/all")
+    .then(response => {
+      // console.log(response.data)
+      setcountries(response.data);
+      console.log(countries)
+      return response.data;
+    })
+   
+  }
+  countriesData()
+
+}, [countries])
+// useState(() =>{
+//   const retrievedCountries = countriesData()
+//   console.log(retrievedCountries)
+// },[])
   return (
     <div>
       <input type="checkbox" id="nav_toggle" className="inputChek" />
@@ -28,8 +48,8 @@ function App(props) {
           </div>
         </nav>
         <main className="App-body">
-          <Countryprofile/>
-          {/* <CountriesList theme={theme} /> */}
+          {/* <Countryprofile/> */}
+          <CountriesList countriesListArray={countries} theme={theme} />
         </main>
       </div>
     </div>
