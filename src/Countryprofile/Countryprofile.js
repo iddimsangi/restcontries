@@ -4,7 +4,7 @@ import flag from "../img/1200px-Flag_of_Germany.svg.png"
 function Countryprofile() {
     return (
         <div className="container">
-            <button>Bacck</button>
+            <button className="container-btn">Bacck</button>
             <div className="container--box">
                 <img src={flag} className="container--box-img" alt="flag"/>
                 <div className="container--box-contents">
@@ -42,9 +42,9 @@ function Countryprofile() {
                     </div>
                     <div className="content--footer">
                         <h3>Border Countries:</h3>
-                        <button>France</button>
-                        <button>Germany</button>
-                        <button>Nerthelands</button>
+                        <button className="content--footer-btn">France</button>
+                        <button className="content--footer-btn">Germany</button>
+                        <button className="content--footer-btn">Nerthelands</button>
                     </div>
                 </div>
             </div>

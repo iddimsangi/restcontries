@@ -22,7 +22,7 @@ useEffect(() =>{
   }
   countriesData()
 
-}, [countries])
+}, [])
 // useState(() =>{
 //   const retrievedCountries = countriesData()
 //   console.log(retrievedCountries)
@@ -48,8 +48,8 @@ useEffect(() =>{
           </div>
         </nav>
         <main className="App-body">
-          <Countryprofile/>
-          {/* <CountriesList countriesListArray={countries} theme={theme} /> */}
+          {/* <Countryprofile/> */}
+          <CountriesList countriesListArray={countries} theme={theme} />
         </main>
       </div>
     </div>

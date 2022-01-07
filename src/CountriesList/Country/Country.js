@@ -7,8 +7,12 @@ function Country(props) {
     return (
         <div className="country-App">
             <div className={props.themeHandler ? "countryBox" : "countryBoxV2"}>
-                {/* <img src={props.countryData.flag} alt="flag"/> */}
-                {props.countryData.flag}
+                <img src={props.countryData.flags.png} alt="flag" style={{
+                    objectFit: "cover",
+                    width: "100%",
+                    height: 150
+                }} />
+                {/* {props.countryData.flag} */}
                 <div className="content">
                     <h3>{props.countryData.name.common}</h3>
                     <h4>Population:<span>{props.countryData.population}</span></h4>
