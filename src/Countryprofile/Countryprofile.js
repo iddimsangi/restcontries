@@ -1,7 +1,10 @@
 import React from 'react'
 import "./Countryprofile.scss"
 import flag from "../img/1200px-Flag_of_Germany.svg.png"
+import { useLocation } from 'react-router-dom';
 function Countryprofile() {
+    let location = useLocation()
+    console.log(location.state)
     return (
         <div className="container">
             <button className="container-btn">Bacck</button>

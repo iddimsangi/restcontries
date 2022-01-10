@@ -6,30 +6,42 @@ function CountriesList(props) {
   return (
     <div className="countryListApp">
       <div className="countryListApp--container">
-        <form action="#" method="GET or POST">
+        <form action="#">
           <div className={props.theme ? "input-container" : "input-container2"}>
-            <label htmlFor="fname">
+            <label for="gsearch">
               <img src={search} alt="search" />
             </label>
             <input
-              type="text"
-              name="FirstName"
-              id="fname"
-              placeholder="Search for a country"
+            type="search" 
+            id="gsearch" 
+            name="gsearch"
+            placeholder="Search for a country"
+            value={props.term}
+            onChange ={ (e) => props.searchTermHandler(e.target.value)}
             />
           </div>
+          {/* <input type="text"
+          value={props.term}
+          onChange ={ (e) => props.searchTermHandler(e.target.value)}
+          placeholder="search"></input> */}
           <select className={props.theme ? "select-container":"select-container2"} name="countries" id="countries">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
+            <option value="0">Filter by region</option>
+            <option value="1">Africa</option>
+            <option value="2">America</option>
+            <option value="3">Asia</option>
+            <option value="3">Europe</option>
+            <option value="3">Oceania</option>
           </select>
           
         </form>
 
         <div className="countryList">
           {props.countriesListArray.map(
-            countriesListArrayObj => <Country countryData = {countriesListArrayObj} themeHandler={props.theme} />
+            countriesListArrayObj => <Country countryData = 
+            {countriesListArrayObj}
+             themeHandler={props.theme} 
+             key ={countriesListArrayObj.area}
+             />
           )}
 
         </div>

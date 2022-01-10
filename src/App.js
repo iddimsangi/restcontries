@@ -1,34 +1,45 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "./App.scss";
 import CountriesList from "./CountriesList/CountriesList";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ReactComponent as Moon } from "./img/half-moon-shape-svgrepo-com.svg";
 import { ReactComponent as MoonIcon } from "./img/icon-moon.svg";
-import Countryprofile from "./Countryprofile/Countryprofile"
+import Countryprofile from "./Countryprofile/Countryprofile";
 import axios from "axios";
 // import moonIcon from "./img/icon-moon.svg";
 function App(props) {
-  const[countries, setcountries] = useState([]);
+  const [countries, setcountries] = useState([]);
+  const [searchTerm, setsearchTerm] = useState("");
+  const [searchTermResult, setsearchTermResult] = useState([]);
   const [theme, settheme] = useState(true);
-useEffect(() =>{
-  const countriesData = () =>{
-    axios.get("https://restcountries.com/v3.1/all")
-    .then(response => {
-      // console.log(response.data)
-      setcountries(response.data);
-      console.log(countries[0])
-      return response.data;
-    })
-   
+  useEffect(() => {
+    const countriesData = () => {
+      axios
+        .get("https://restcountries.com/v3.1/all?limit=0")
+        .then((response) => {
+          console.log(response.data);
+          setcountries(response.data);
+          console.log(countries[0]);
+          return response.data;
+        });
+    };
+    countriesData();
+  }, []);
+  const searchTermHandler = (searchKeyword) => {
+console.log(searchKeyword);
+    const searchedCountry = countries.filter((country) =>{
+      // console.log(Object.values(country).join(" ").toLocaleLowerCase().includes(searchKeyword.toLocaleLowerCase()))
+      return Object.values(country).join(" ").toLocaleLowerCase().includes(searchKeyword.toLocaleLowerCase());
+    });
+    setsearchTermResult(searchedCountry);
   }
-  countriesData()
-
-}, [])
-// useState(() =>{
-//   const retrievedCountries = countriesData()
-//   console.log(retrievedCountries)
-// },[])
+  // useState(() =>{
+  //   const retrievedCountries = countriesData()
+  //   console.log(retrievedCountries)
+  // },[])
   return (
-    <div>
+    <BrowserRouter>
+<div>
       <input type="checkbox" id="nav_toggle" className="inputChek" />
       <div className="App">
         <nav className="App-header">
@@ -48,11 +59,24 @@ useEffect(() =>{
           </div>
         </nav>
         <main className="App-body">
+
+      <Routes>
+      <Route path="/" exact element={    <CountriesList 
+          countriesListArray={searchTerm.length < 1 ? countries : searchTermResult} 
+          term = {searchTerm} 
+          searchTermHandler ={searchTermHandler}
+           theme={theme} />}/>
+        <Route path="Countryprofile/" exact element={<Countryprofile  />} />
+   
+      </Routes>
           {/* <Countryprofile/> */}
-          <CountriesList countriesListArray={countries} theme={theme} />
+      
         </main>
       </div>
     </div>
+    </BrowserRouter>
+
+    
   );
 }
 
