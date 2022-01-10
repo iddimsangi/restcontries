@@ -1,44 +1,48 @@
 import React from 'react'
 import "./Countryprofile.scss"
 import flag from "../img/1200px-Flag_of_Germany.svg.png"
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link} from 'react-router-dom';
 function Countryprofile() {
     let location = useLocation()
     console.log(location.state)
+
     return (
         <div className="container">
+            <Link to="/">
             <button className="container-btn">Bacck</button>
+            </Link>
+            
             <div className="container--box">
-                <img src={flag} className="container--box-img" alt="flag"/>
+                <img src={location.state.flags.png} className="container--box-img" alt="flag"/>
                 <div className="container--box-contents">
-                    <h2>Belgium</h2>
+                    <h2>{location.state.name.common}</h2>
                     <div className="inner-box">
                         <ul className="inner-box--l1">
                             <li>
-                                Native Name:<span>Belgium</span>
+                                Native Name:<span>{location.state.name.common}</span>
                             </li>
                             <li>
-                               Population:<span>11,319,511</span>
+                               Population:<span>{location.state.population}</span>
                             </li>
                             <li>
-                                Region:<span>Europe</span>
+                                Region:<span>{location.state.region}</span>
                             </li>
                             <li>
-                                Sub Region:<span>Western Europe</span>
+                                Sub Region:<span>{location.state.subregion}</span>
                             </li>
                             <li>
-                                Capital:<span>Brussels</span>
+                                Capital:<span>{location.state.capital}</span>
                             </li>
                         </ul>
                         <ul className="inner-box--l2">
                             <li>
-                                Top Level Domain:<span>.be</span>
+                                Top Level Domain:<span>{location.state.tld}</span>
                             </li>
                             <li>
-                               Currencies:<span>Euro</span>
+                               {/* Currencies:<span>{location.state.currencies}</span> */}
                             </li>
                             <li>
-                                Languages:<span>Dutch, French, Germany</span>
+                                {/* Languages:<span>{location.state.languages}</span> */}
                             </li>
                             
                         </ul>

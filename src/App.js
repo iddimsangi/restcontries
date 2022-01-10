@@ -26,6 +26,7 @@ function App(props) {
     countriesData();
   }, []);
   const searchTermHandler = (searchKeyword) => {
+    setsearchTerm(searchKeyword);
 console.log(searchKeyword);
     const searchedCountry = countries.filter((country) =>{
       // console.log(Object.values(country).join(" ").toLocaleLowerCase().includes(searchKeyword.toLocaleLowerCase()))
@@ -61,7 +62,7 @@ console.log(searchKeyword);
         <main className="App-body">
 
       <Routes>
-      <Route path="/" exact element={    <CountriesList 
+      <Route path="/" exact element={ <CountriesList 
           countriesListArray={searchTerm.length < 1 ? countries : searchTermResult} 
           term = {searchTerm} 
           searchTermHandler ={searchTermHandler}
