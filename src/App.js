@@ -12,11 +12,15 @@ function App(props) {
   const [searchTerm, setsearchTerm] = useState("");
   const [searchTermResult, setsearchTermResult] = useState([]);
   const [theme, settheme] = useState(true);
+  const optionHandler = (optLabel) =>{
+    console.log(optLabel);
+  }
+  optionHandler()
   useEffect(() => {
     const countriesData = () => {
       axios
         .get("https://restcountries.com/v3.1/all")
-        // .get("https://restcountries.com/v3.1/subregion/Africa")
+        //.get(`https://restcountries.com/v3.1/region/{region}`)
         .then((response) => {
           console.log(response.data);
           setcountries(response.data);
@@ -65,6 +69,8 @@ console.log(searchKeyword);
       <Routes>
       <Route path="/" exact element={ <CountriesList 
           countriesListArray={searchTerm.length < 1 ? countries : searchTermResult} 
+          // getValueHandler = {countriesData}
+          optionHandler ={optionHandler}
           term = {searchTerm} 
           searchTermHandler ={searchTermHandler}
            theme={theme} />}/>

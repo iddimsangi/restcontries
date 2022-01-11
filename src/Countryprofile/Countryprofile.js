@@ -42,10 +42,10 @@ function Countryprofile() {
                                 Top Level Domain:<span>{location.state.tld}</span>
                             </li>
                             <li>
-                               Currencies:<span></span>
+                               Currencies:<span>yy</span>
                             </li>
                             <li>
-                                {/* Languages:<span>{location.state.languages}</span> */}
+                                Languages:<span>xx</span>
                             </li>
                             
                         </ul>

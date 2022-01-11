@@ -5,14 +5,12 @@ import search from "../img/icons8-search.svg";
 function CountriesList(props) {
   const options = [
     { value: '2', label: 'America' },
-    { value: '3', label: 'Asia' },
-    { value: '4', label: 'Europe' },
-    { value: '5', label: 'Oceania' }
+    { value: '3', label: 'Africa' },
+    { value: '4', label: 'Asia' },
+    { value: '5', label: 'europe' },
+    { value: '6', label: 'Oceania' }
   ];
-  const getValue = e =>{
-    // console.log(e.target.value)
-  }
-  getValue()
+
   return (
     <div className="countryListApp">
       <div className="countryListApp--container">
@@ -37,7 +35,8 @@ function CountriesList(props) {
           <select className={props.theme ? "select-container":"select-container2"} name="countries" id="countries">
             <option value="0">Filter by region</option>
             {options.map(option =>{
-              return <option value={option.value}>{option.label}</option>
+              console.log(option.label);
+              return <option  value={option.value}>{option.label}</option>
             })}
             {/* <option onClick={getValue} value="1">Africa</option>
             <option value="2">America</option>
