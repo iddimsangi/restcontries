@@ -74,7 +74,7 @@ console.log(searchKeyword);
           term = {searchTerm} 
           searchTermHandler ={searchTermHandler}
            theme={theme} />}/>
-        <Route path="Countryprofile/" exact element={<Countryprofile  />} />
+        <Route path="Countryprofile/" exact element={<Countryprofile theme={theme}  />} />
    
       </Routes>
           {/* <Countryprofile/> */}

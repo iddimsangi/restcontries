@@ -2,7 +2,7 @@ import React from 'react'
 import "./Countryprofile.scss"
 import flag from "../img/1200px-Flag_of_Germany.svg.png"
 import { useLocation, Link} from 'react-router-dom';
-function Countryprofile() {
+function Countryprofile({theme}) {
     let location = useLocation()
     console.log(Object.keys(location.state.currencies)[0])
     let x = Object.keys(location.state.currencies)[0];
@@ -17,7 +17,7 @@ function Countryprofile() {
             
             <div className="container--box">
                 <img src={location.state.flags.png} className="container--box-img" alt="flag"/>
-                <div className="container--box-contents">
+                <div className={theme ? "container--box-contents":"container--box-contents-dark" }>
                     <h2>{location.state.name.common}</h2>
                     <div className="inner-box">
                         <ul className="inner-box--l1">
