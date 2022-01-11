@@ -4,7 +4,10 @@ import flag from "../img/1200px-Flag_of_Germany.svg.png"
 import { useLocation, Link} from 'react-router-dom';
 function Countryprofile() {
     let location = useLocation()
-    console.log(location.state)
+    console.log(Object.keys(location.state.currencies)[0])
+    let x = Object.keys(location.state.currencies)[0];
+    console.log((location.state.currencies))
+    console.log(location.state.languages)
 
     return (
         <div className="container">
@@ -39,7 +42,7 @@ function Countryprofile() {
                                 Top Level Domain:<span>{location.state.tld}</span>
                             </li>
                             <li>
-                               {/* Currencies:<span>{location.state.currencies}</span> */}
+                               Currencies:<span></span>
                             </li>
                             <li>
                                 {/* Languages:<span>{location.state.languages}</span> */}

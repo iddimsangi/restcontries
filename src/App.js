@@ -15,7 +15,8 @@ function App(props) {
   useEffect(() => {
     const countriesData = () => {
       axios
-        .get("https://restcountries.com/v3.1/all?limit=0")
+        .get("https://restcountries.com/v3.1/all")
+        // .get("https://restcountries.com/v3.1/subregion/Africa")
         .then((response) => {
           console.log(response.data);
           setcountries(response.data);
