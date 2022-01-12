@@ -51,7 +51,7 @@ function CountriesList(props) {
             countriesListArrayObj => <Country countryData = 
             {countriesListArrayObj}
              themeHandler={props.theme} 
-             key ={countriesListArrayObj.area}
+             key ={countriesListArrayObj.name.common}
              />
           )}
 

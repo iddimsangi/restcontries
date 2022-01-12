@@ -34,18 +34,21 @@ function Countryprofile({theme}) {
                                 Sub Region:<span>{location.state.subregion}</span>
                             </li>
                             <li>
-                                Capital:<span>{location.state.capital}</span>
+                                Capital:<span> {location.state.capital}</span>
                             </li>
                         </ul>
                         <ul className="inner-box--l2">
                             <li>
-                                Top Level Domain:<span>{location.state.tld}</span>
+                                Top Level Domain:<span> {location.state.tld}</span>
                             </li>
                             <li>
-                               Currencies:<span>yy</span>
+                               Currencies:<span>{Object.keys(location.state.currencies).map(key =>  {
+                                        return location.state.currencies[key].name
+                               }).join(', ')}</span>
+                               {/* Currencies:<span>YYY</span> */}
                             </li>
                             <li>
-                                Languages:<span>xx</span>
+                                Languages: <span>{}</span>
                             </li>
                             
                         </ul>
