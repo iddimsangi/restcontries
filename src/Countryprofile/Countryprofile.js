@@ -4,10 +4,12 @@ import flag from "../img/1200px-Flag_of_Germany.svg.png"
 import { useLocation, Link} from 'react-router-dom';
 function Countryprofile({theme}) {
     let location = useLocation()
-    console.log(Object.keys(location.state.currencies)[0])
+  
     let x = Object.keys(location.state.currencies)[0];
     console.log((location.state.currencies))
+    console.log(Object.keys(location.state.currencies))
     console.log(location.state.languages)
+    console.log(Object.values(location.state.languages))
 
     return (
         <div className="container">
@@ -22,16 +24,16 @@ function Countryprofile({theme}) {
                     <div className="inner-box">
                         <ul className="inner-box--l1">
                             <li>
-                                Native Name:<span>{location.state.name.common}</span>
+                                Native Name:<span> {location.state.name.common}</span>
                             </li>
                             <li>
-                               Population:<span>{location.state.population}</span>
+                               Population:<span> {location.state.population}</span>
                             </li>
                             <li>
-                                Region:<span>{location.state.region}</span>
+                                Region:<span> {location.state.region}</span>
                             </li>
                             <li>
-                                Sub Region:<span>{location.state.subregion}</span>
+                                Sub Region:<span> {location.state.subregion}</span>
                             </li>
                             <li>
                                 Capital:<span> {location.state.capital}</span>
@@ -42,13 +44,15 @@ function Countryprofile({theme}) {
                                 Top Level Domain:<span> {location.state.tld}</span>
                             </li>
                             <li>
-                               Currencies:<span>{Object.keys(location.state.currencies).map(key =>  {
+                               Currencies:<span> {Object.keys(location.state.currencies).map(key =>  {
                                         return location.state.currencies[key].name
                                }).join(', ')}</span>
                                {/* Currencies:<span>YYY</span> */}
                             </li>
                             <li>
-                                Languages: <span>{}</span>
+                                Languages: <span> {Object.values(location.state.languages).map(key =>{  
+                                    return key
+                                }).join(', ')}</span>
                             </li>
                             
                         </ul>
