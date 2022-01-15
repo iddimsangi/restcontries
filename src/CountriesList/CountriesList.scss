@@ -7,14 +7,19 @@
         form{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            // margin: 0 auto;
+            gap: 45%;
+            // gap: 50rem
+            // justify-content: space-between;
+            width: 98%;
+            margin: 0 auto;
             // margin-right: 10rem;
             // border: 1px solid red;
           
             .input-container{
+                // border: 1px solid red;
                 width: 40%;
+                // min-width: 25rem;
+                // width: 20rem;
                 background-color: hsl(209, 23%, 22%);
                 box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
               display: flex;
@@ -46,7 +51,8 @@
             }
 
             .input-container2{
-                width: 40%;
+                // width: 40%;
+                gap: 12rem;
                 background-color:#fff;
                 color: #222;
                 box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;

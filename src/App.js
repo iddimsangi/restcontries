@@ -11,20 +11,40 @@ function App(props) {
   const [countries, setcountries] = useState([]);
   const [searchTerm, setsearchTerm] = useState("");
   const [searchTermResult, setsearchTermResult] = useState([]);
+  const [region, setRegion] = useState('')
   const [theme, settheme] = useState(true);
   const optionHandler = (optLabel) =>{
-    console.log(optLabel);
+    // console.log(optLabel);
   }
   optionHandler()
+  const getRegion = (region) =>{
+  setRegion(region);
+  }
+  useEffect(() =>{
+    const countriesData = () => {
+      axios
+        // .get("https://restcountries.com/v3.1/all")
+        .get(`https://restcountries.com/v3.1/region/${region}`)
+        .then((response) => {
+          console.log(response.data);
+          setcountries(response.data);
+          console.log(countries[0]);
+          return response.data;
+        });
+    };
+    if(region)
+    countriesData();
+  }, [region])
+  console.log("region:>>", region);
   useEffect(() => {
     const countriesData = () => {
       axios
         .get("https://restcountries.com/v3.1/all")
         //.get(`https://restcountries.com/v3.1/region/{region}`)
         .then((response) => {
-          console.log(response.data);
+          // console.log(response.data);
           setcountries(response.data);
-          console.log(countries[0]);
+          // console.log(countries[0]);
           return response.data;
         });
     };
@@ -72,9 +92,10 @@ console.log(searchKeyword);
           // getValueHandler = {countriesData}
           optionHandler ={optionHandler}
           term = {searchTerm} 
+          getRegion = {getRegion}
           searchTermHandler ={searchTermHandler}
            theme={theme} />}/>
-        <Route path="Countryprofile/" exact element={<Countryprofile theme={theme}  />} />
+        <Route path="Countryprofile/" exact element={<Countryprofile  theme={theme}  />} />
    
       </Routes>
           {/* <Countryprofile/> */}

@@ -32,17 +32,12 @@ function CountriesList(props) {
           value={props.term}
           onChange ={ (e) => props.searchTermHandler(e.target.value)}
           placeholder="search"></input> */}
-          <select className={props.theme ? "select-container":"select-container2"} name="countries" id="countries">
+          <select onChange ={(e) => {props.getRegion(e.target.value)}}  className={props.theme ? "select-container":"select-container2"} name="countries" id="countries">
             <option value="0">Filter by region</option>
             {options.map(option =>{
-              console.log(option.label);
-              return <option  value={option.value}>{option.label}</option>
+              // console.log(option.label);
+              return <option  value={option.label}>{option.label}</option>
             })}
-            {/* <option onClick={getValue} value="1">Africa</option>
-            <option value="2">America</option>
-            <option value="3">Asia</option>
-            <option value="4">Europe</option>
-            <option value="5">Oceania</option> */}
           </select>       
         </form>
 
